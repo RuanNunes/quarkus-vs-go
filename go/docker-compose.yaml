@@ -1,0 +1,14 @@
+
+services:
+  go-api:
+    image: go/quarkus-vs-go-debian11-distroless
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8090"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: '300M'
