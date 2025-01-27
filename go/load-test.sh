@@ -1,1 +1,1 @@
-wrk -t10 -c10 -d10s http://0.0.0.0:8090/hello
+wrk -t10 -c10 -d5m http://0.0.0.0:8090/hello

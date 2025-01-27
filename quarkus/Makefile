@@ -16,6 +16,15 @@ native:
 micro:
 	docker-compose up -d native-micro
 
+load-native-micro:
+	wrk -t10 -c10 -d1m http://0.0.0.0:8080/hello
+load-native:
+	wrk -t10 -c10 -d1m http://0.0.0.0:8081/hello
+load-jvm-legacy:
+	wrk -t10 -c10 -d1m http://0.0.0.0:8082/hello
+load-jvm:
+	wrk -t10 -c10 -d1m http://0.0.0.0:8083/hello
+
 
 down:
 	docker-compose down

@@ -13,7 +13,7 @@ public class GreetingResource {
     @GET
     @NonBlocking
     @VirtualThreads
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     public String hello() {
         return "Hello from Quarkus REST";
     }
